@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Offsettimeid:</b>
+  <%= @ionosphere.offsetTimeID %>
+</p>
+
+<p>
+  <b>Pseudorangederivedstec:</b>
+  <%= @ionosphere.pseudorangeDerivedSTEC %>
+</p>
+
+<p>
+  <b>Pseudorangederivedstecdot:</b>
+  <%= @ionosphere.pseudorangeDerivedSTECDot %>
+</p>
+
+<p>
+  <b>Transmitterid:</b>
+  <%= @ionosphere.transmitterID %>
+</p>
+
+
+<%= link_to 'Edit', edit_ionosphere_path(@ionosphere) %> |
+<%= link_to 'Back', ionospheres_path %>

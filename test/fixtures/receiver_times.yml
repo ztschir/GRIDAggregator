@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  receiverWeekNumber: 1
+  receiverSecondsOfWeek: 1.5
+
+two:
+  receiverWeekNumber: 1
+  receiverSecondsOfWeek: 1.5

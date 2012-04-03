@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Receiverid:</b>
+  <%= @channel.receiverID %>
+</p>
+
+<p>
+  <b>Receivertimeid:</b>
+  <%= @channel.receiverTimeID %>
+</p>
+
+<p>
+  <b>Offsettimeid:</b>
+  <%= @channel.offsetTimeID %>
+</p>
+
+<p>
+  <b>Channelstatusid:</b>
+  <%= @channel.channelStatusID %>
+</p>
+
+<p>
+  <b>Signaltypeid:</b>
+  <%= @channel.signalTypeID %>
+</p>
+
+<p>
+  <b>Transmitterid:</b>
+  <%= @channel.transmitterID %>
+</p>
+
+<p>
+  <b>Apperentdoppler:</b>
+  <%= @channel.apperentDoppler %>
+</p>
+
+<p>
+  <b>Beatcarrierphase:</b>
+  <%= @channel.beatCarrierPhase %>
+</p>
+
+<p>
+  <b>Pseudorange:</b>
+  <%= @channel.pseudorange %>
+</p>
+
+<p>
+  <b>Carriertonoiseratio:</b>
+  <%= @channel.carrierToNoiseRatio %>
+</p>
+
+<p>
+  <b>Isvalidpseudorangeandphase:</b>
+  <%= @channel.isValidPseudorangeAndPhase %>
+</p>
+
+<p>
+  <b>Isanomalydetected:</b>
+  <%= @channel.isAnomalyDetected %>
+</p>
+
+
+<%= link_to 'Edit', edit_channel_path(@channel) %> |
+<%= link_to 'Back', channels_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  offsetTimeID: 1
+  pseudorangeDerivedSTEC: 1.5
+  pseudorangeDerivedSTECDot: 1.5
+  transmitterID: 1
+
+two:
+  offsetTimeID: 1
+  pseudorangeDerivedSTEC: 1.5
+  pseudorangeDerivedSTECDot: 1.5
+  transmitterID: 1

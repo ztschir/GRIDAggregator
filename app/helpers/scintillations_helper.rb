@@ -1,0 +1,2 @@
+module ScintillationsHelper
+end

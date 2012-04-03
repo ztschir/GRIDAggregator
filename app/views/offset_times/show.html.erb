@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Offsetweeknumber:</b>
+  <%= @offset_time.offsetWeekNumber %>
+</p>
+
+<p>
+  <b>Offsetwholesecondsofweek:</b>
+  <%= @offset_time.offsetWholeSecondsOfWeek %>
+</p>
+
+<p>
+  <b>Offsetfractionalsecond:</b>
+  <%= @offset_time.offsetFractionalSecond %>
+</p>
+
+
+<%= link_to 'Edit', edit_offset_time_path(@offset_time) %> |
+<%= link_to 'Back', offset_times_path %>

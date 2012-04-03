@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Receiverid:</b>
+  <%= @navigation_solution.receiverID %>
+</p>
+
+<p>
+  <b>Navigationsolverid:</b>
+  <%= @navigation_solution.navigationSolverID %>
+</p>
+
+<p>
+  <b>Xposition:</b>
+  <%= @navigation_solution.xPosition %>
+</p>
+
+<p>
+  <b>Yposition:</b>
+  <%= @navigation_solution.yPosition %>
+</p>
+
+<p>
+  <b>Zposition:</b>
+  <%= @navigation_solution.zPosition %>
+</p>
+
+<p>
+  <b>Deltareceiverclockerror:</b>
+  <%= @navigation_solution.deltaReceiverClockError %>
+</p>
+
+<p>
+  <b>Xvelocity:</b>
+  <%= @navigation_solution.xVelocity %>
+</p>
+
+<p>
+  <b>Yvelocity:</b>
+  <%= @navigation_solution.yVelocity %>
+</p>
+
+<p>
+  <b>Zvelocity:</b>
+  <%= @navigation_solution.zVelocity %>
+</p>
+
+<p>
+  <b>Deltareceiverclockerrordot:</b>
+  <%= @navigation_solution.deltaReceiverClockErrorDot %>
+</p>
+
+
+<%= link_to 'Edit', edit_navigation_solution_path(@navigation_solution) %> |
+<%= link_to 'Back', navigation_solutions_path %>

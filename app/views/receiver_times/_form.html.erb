@@ -1,0 +1,25 @@
+<%= form_for(@receiver_time) do |f| %>
+  <% if @receiver_time.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@receiver_time.errors.count, "error") %> prohibited this receiver_time from being saved:</h2>
+
+      <ul>
+      <% @receiver_time.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :receiverWeekNumber %><br />
+    <%= f.number_field :receiverWeekNumber %>
+  </div>
+  <div class="field">
+    <%= f.label :receiverSecondsOfWeek %><br />
+    <%= f.text_field :receiverSecondsOfWeek %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

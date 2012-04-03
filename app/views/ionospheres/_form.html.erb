@@ -1,0 +1,33 @@
+<%= form_for(@ionosphere) do |f| %>
+  <% if @ionosphere.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ionosphere.errors.count, "error") %> prohibited this ionosphere from being saved:</h2>
+
+      <ul>
+      <% @ionosphere.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :offsetTimeID %><br />
+    <%= f.number_field :offsetTimeID %>
+  </div>
+  <div class="field">
+    <%= f.label :pseudorangeDerivedSTEC %><br />
+    <%= f.text_field :pseudorangeDerivedSTEC %>
+  </div>
+  <div class="field">
+    <%= f.label :pseudorangeDerivedSTECDot %><br />
+    <%= f.text_field :pseudorangeDerivedSTECDot %>
+  </div>
+  <div class="field">
+    <%= f.label :transmitterID %><br />
+    <%= f.number_field :transmitterID %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

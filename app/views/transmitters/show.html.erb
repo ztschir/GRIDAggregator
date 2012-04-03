@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Receiverid:</b>
+  <%= @transmitter.receiverID %>
+</p>
+
+<p>
+  <b>Offsettimeid:</b>
+  <%= @transmitter.offsetTimeID %>
+</p>
+
+<p>
+  <b>Azmiuth:</b>
+  <%= @transmitter.azmiuth %>
+</p>
+
+<p>
+  <b>Elevation:</b>
+  <%= @transmitter.elevation %>
+</p>
+
+<p>
+  <b>Healthstatusid:</b>
+  <%= @transmitter.healthStatusID %>
+</p>
+
+<p>
+  <b>Transmittersystemid:</b>
+  <%= @transmitter.transmitterSystemID %>
+</p>
+
+<p>
+  <b>Transmitterid:</b>
+  <%= @transmitter.transmitterID %>
+</p>
+
+
+<%= link_to 'Edit', edit_transmitter_path(@transmitter) %> |
+<%= link_to 'Back', transmitters_path %>

@@ -1,0 +1,65 @@
+<%= form_for(@channel) do |f| %>
+  <% if @channel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@channel.errors.count, "error") %> prohibited this channel from being saved:</h2>
+
+      <ul>
+      <% @channel.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :receiverID %><br />
+    <%= f.number_field :receiverID %>
+  </div>
+  <div class="field">
+    <%= f.label :receiverTimeID %><br />
+    <%= f.number_field :receiverTimeID %>
+  </div>
+  <div class="field">
+    <%= f.label :offsetTimeID %><br />
+    <%= f.number_field :offsetTimeID %>
+  </div>
+  <div class="field">
+    <%= f.label :channelStatusID %><br />
+    <%= f.number_field :channelStatusID %>
+  </div>
+  <div class="field">
+    <%= f.label :signalTypeID %><br />
+    <%= f.number_field :signalTypeID %>
+  </div>
+  <div class="field">
+    <%= f.label :transmitterID %><br />
+    <%= f.number_field :transmitterID %>
+  </div>
+  <div class="field">
+    <%= f.label :apperentDoppler %><br />
+    <%= f.text_field :apperentDoppler %>
+  </div>
+  <div class="field">
+    <%= f.label :beatCarrierPhase %><br />
+    <%= f.text_field :beatCarrierPhase %>
+  </div>
+  <div class="field">
+    <%= f.label :pseudorange %><br />
+    <%= f.text_field :pseudorange %>
+  </div>
+  <div class="field">
+    <%= f.label :carrierToNoiseRatio %><br />
+    <%= f.text_field :carrierToNoiseRatio %>
+  </div>
+  <div class="field">
+    <%= f.label :isValidPseudorangeAndPhase %><br />
+    <%= f.check_box :isValidPseudorangeAndPhase %>
+  </div>
+  <div class="field">
+    <%= f.label :isAnomalyDetected %><br />
+    <%= f.check_box :isAnomalyDetected %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

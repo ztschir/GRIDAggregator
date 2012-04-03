@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  receiverID: 1
+  navigationSolverID: 1
+  xPosition: 1.5
+  yPosition: 1.5
+  zPosition: 1.5
+  deltaReceiverClockError: 1.5
+  xVelocity: 1.5
+  yVelocity: 1.5
+  zVelocity: 1.5
+  deltaReceiverClockErrorDot: 1.5
+
+two:
+  receiverID: 1
+  navigationSolverID: 1
+  xPosition: 1.5
+  yPosition: 1.5
+  zPosition: 1.5
+  deltaReceiverClockError: 1.5
+  xVelocity: 1.5
+  yVelocity: 1.5
+  zVelocity: 1.5
+  deltaReceiverClockErrorDot: 1.5

@@ -1,0 +1,45 @@
+<h1>Listing channels</h1>
+
+<table>
+  <tr>
+    <th>Receiverid</th>
+    <th>Receivertimeid</th>
+    <th>Offsettimeid</th>
+    <th>Channelstatusid</th>
+    <th>Signaltypeid</th>
+    <th>Transmitterid</th>
+    <th>Apperentdoppler</th>
+    <th>Beatcarrierphase</th>
+    <th>Pseudorange</th>
+    <th>Carriertonoiseratio</th>
+    <th>Isvalidpseudorangeandphase</th>
+    <th>Isanomalydetected</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @channels.each do |channel| %>
+  <tr>
+    <td><%= channel.receiverID %></td>
+    <td><%= channel.receiverTimeID %></td>
+    <td><%= channel.offsetTimeID %></td>
+    <td><%= channel.channelStatusID %></td>
+    <td><%= channel.signalTypeID %></td>
+    <td><%= channel.transmitterID %></td>
+    <td><%= channel.apperentDoppler %></td>
+    <td><%= channel.beatCarrierPhase %></td>
+    <td><%= channel.pseudorange %></td>
+    <td><%= channel.carrierToNoiseRatio %></td>
+    <td><%= channel.isValidPseudorangeAndPhase %></td>
+    <td><%= channel.isAnomalyDetected %></td>
+    <td><%= link_to 'Show', channel %></td>
+    <td><%= link_to 'Edit', edit_channel_path(channel) %></td>
+    <td><%= link_to 'Destroy', channel, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Channel', new_channel_path %>

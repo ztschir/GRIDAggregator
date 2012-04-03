@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  offsetWeekNumber: 1
+  offsetWholeSecondsOfWeek: 1.5
+  offsetFractionalSecond: 1.5
+
+two:
+  offsetWeekNumber: 1
+  offsetWholeSecondsOfWeek: 1.5
+  offsetFractionalSecond: 1.5

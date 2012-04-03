@@ -1,0 +1,29 @@
+<%= form_for(@offset_time) do |f| %>
+  <% if @offset_time.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@offset_time.errors.count, "error") %> prohibited this offset_time from being saved:</h2>
+
+      <ul>
+      <% @offset_time.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :offsetWeekNumber %><br />
+    <%= f.number_field :offsetWeekNumber %>
+  </div>
+  <div class="field">
+    <%= f.label :offsetWholeSecondsOfWeek %><br />
+    <%= f.text_field :offsetWholeSecondsOfWeek %>
+  </div>
+  <div class="field">
+    <%= f.label :offsetFractionalSecond %><br />
+    <%= f.text_field :offsetFractionalSecond %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

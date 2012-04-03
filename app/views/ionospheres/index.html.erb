@@ -1,0 +1,29 @@
+<h1>Listing ionospheres</h1>
+
+<table>
+  <tr>
+    <th>Offsettimeid</th>
+    <th>Pseudorangederivedstec</th>
+    <th>Pseudorangederivedstecdot</th>
+    <th>Transmitterid</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ionospheres.each do |ionosphere| %>
+  <tr>
+    <td><%= ionosphere.offsetTimeID %></td>
+    <td><%= ionosphere.pseudorangeDerivedSTEC %></td>
+    <td><%= ionosphere.pseudorangeDerivedSTECDot %></td>
+    <td><%= ionosphere.transmitterID %></td>
+    <td><%= link_to 'Show', ionosphere %></td>
+    <td><%= link_to 'Edit', edit_ionosphere_path(ionosphere) %></td>
+    <td><%= link_to 'Destroy', ionosphere, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ionosphere', new_ionosphere_path %>

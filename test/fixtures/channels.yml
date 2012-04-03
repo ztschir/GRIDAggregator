@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  receiverID: 1
+  receiverTimeID: 1
+  offsetTimeID: 1
+  channelStatusID: 1
+  signalTypeID: 1
+  transmitterID: 1
+  apperentDoppler: 1.5
+  beatCarrierPhase: 1.5
+  pseudorange: 1.5
+  carrierToNoiseRatio: 1.5
+  isValidPseudorangeAndPhase: false
+  isAnomalyDetected: false
+
+two:
+  receiverID: 1
+  receiverTimeID: 1
+  offsetTimeID: 1
+  channelStatusID: 1
+  signalTypeID: 1
+  transmitterID: 1
+  apperentDoppler: 1.5
+  beatCarrierPhase: 1.5
+  pseudorange: 1.5
+  carrierToNoiseRatio: 1.5
+  isValidPseudorangeAndPhase: false
+  isAnomalyDetected: false

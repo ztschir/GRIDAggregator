@@ -1,0 +1,2 @@
+module ReceiverTimesHelper
+end

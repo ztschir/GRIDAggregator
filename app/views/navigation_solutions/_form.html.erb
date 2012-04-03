@@ -1,0 +1,57 @@
+<%= form_for(@navigation_solution) do |f| %>
+  <% if @navigation_solution.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@navigation_solution.errors.count, "error") %> prohibited this navigation_solution from being saved:</h2>
+
+      <ul>
+      <% @navigation_solution.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :receiverID %><br />
+    <%= f.number_field :receiverID %>
+  </div>
+  <div class="field">
+    <%= f.label :navigationSolverID %><br />
+    <%= f.number_field :navigationSolverID %>
+  </div>
+  <div class="field">
+    <%= f.label :xPosition %><br />
+    <%= f.text_field :xPosition %>
+  </div>
+  <div class="field">
+    <%= f.label :yPosition %><br />
+    <%= f.text_field :yPosition %>
+  </div>
+  <div class="field">
+    <%= f.label :zPosition %><br />
+    <%= f.text_field :zPosition %>
+  </div>
+  <div class="field">
+    <%= f.label :deltaReceiverClockError %><br />
+    <%= f.text_field :deltaReceiverClockError %>
+  </div>
+  <div class="field">
+    <%= f.label :xVelocity %><br />
+    <%= f.text_field :xVelocity %>
+  </div>
+  <div class="field">
+    <%= f.label :yVelocity %><br />
+    <%= f.text_field :yVelocity %>
+  </div>
+  <div class="field">
+    <%= f.label :zVelocity %><br />
+    <%= f.text_field :zVelocity %>
+  </div>
+  <div class="field">
+    <%= f.label :deltaReceiverClockErrorDot %><br />
+    <%= f.text_field :deltaReceiverClockErrorDot %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

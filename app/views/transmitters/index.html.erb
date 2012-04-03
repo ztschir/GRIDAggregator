@@ -1,0 +1,35 @@
+<h1>Listing transmitters</h1>
+
+<table>
+  <tr>
+    <th>Receiverid</th>
+    <th>Offsettimeid</th>
+    <th>Azmiuth</th>
+    <th>Elevation</th>
+    <th>Healthstatusid</th>
+    <th>Transmittersystemid</th>
+    <th>Transmitterid</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @transmitters.each do |transmitter| %>
+  <tr>
+    <td><%= transmitter.receiverID %></td>
+    <td><%= transmitter.offsetTimeID %></td>
+    <td><%= transmitter.azmiuth %></td>
+    <td><%= transmitter.elevation %></td>
+    <td><%= transmitter.healthStatusID %></td>
+    <td><%= transmitter.transmitterSystemID %></td>
+    <td><%= transmitter.transmitterID %></td>
+    <td><%= link_to 'Show', transmitter %></td>
+    <td><%= link_to 'Edit', edit_transmitter_path(transmitter) %></td>
+    <td><%= link_to 'Destroy', transmitter, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Transmitter', new_transmitter_path %>

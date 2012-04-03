@@ -1,0 +1,27 @@
+<h1>Listing offset_times</h1>
+
+<table>
+  <tr>
+    <th>Offsetweeknumber</th>
+    <th>Offsetwholesecondsofweek</th>
+    <th>Offsetfractionalsecond</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @offset_times.each do |offset_time| %>
+  <tr>
+    <td><%= offset_time.offsetWeekNumber %></td>
+    <td><%= offset_time.offsetWholeSecondsOfWeek %></td>
+    <td><%= offset_time.offsetFractionalSecond %></td>
+    <td><%= link_to 'Show', offset_time %></td>
+    <td><%= link_to 'Edit', edit_offset_time_path(offset_time) %></td>
+    <td><%= link_to 'Destroy', offset_time, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Offset time', new_offset_time_path %>

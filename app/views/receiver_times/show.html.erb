@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Receiverweeknumber:</b>
+  <%= @receiver_time.receiverWeekNumber %>
+</p>
+
+<p>
+  <b>Receiversecondsofweek:</b>
+  <%= @receiver_time.receiverSecondsOfWeek %>
+</p>
+
+
+<%= link_to 'Edit', edit_receiver_time_path(@receiver_time) %> |
+<%= link_to 'Back', receiver_times_path %>

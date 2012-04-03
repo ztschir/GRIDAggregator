@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  receiverID: 1
+  offsetTimeID: 1
+  azmiuth: 1.5
+  elevation: 1.5
+  healthStatusID: 1
+  transmitterSystemID: 1
+  transmitterID: 1
+
+two:
+  receiverID: 1
+  offsetTimeID: 1
+  azmiuth: 1.5
+  elevation: 1.5
+  healthStatusID: 1
+  transmitterSystemID: 1
+  transmitterID: 1

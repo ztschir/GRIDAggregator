@@ -1,0 +1,73 @@
+<%= form_for(@scintillation) do |f| %>
+  <% if @scintillation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@scintillation.errors.count, "error") %> prohibited this scintillation from being saved:</h2>
+
+      <ul>
+      <% @scintillation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :receiverID %><br />
+    <%= f.number_field :receiverID %>
+  </div>
+  <div class="field">
+    <%= f.label :offsetTimeID %><br />
+    <%= f.number_field :offsetTimeID %>
+  </div>
+  <div class="field">
+    <%= f.label :measurementIntervalLength %><br />
+    <%= f.text_field :measurementIntervalLength %>
+  </div>
+  <div class="field">
+    <%= f.label :s4WholeInterval %><br />
+    <%= f.text_field :s4WholeInterval %>
+  </div>
+  <div class="field">
+    <%= f.label :s4FirstHalfInterval %><br />
+    <%= f.text_field :s4FirstHalfInterval %>
+  </div>
+  <div class="field">
+    <%= f.label :s4SecondHalfInterval %><br />
+    <%= f.text_field :s4SecondHalfInterval %>
+  </div>
+  <div class="field">
+    <%= f.label :sigmaPhiWholeInterval %><br />
+    <%= f.text_field :sigmaPhiWholeInterval %>
+  </div>
+  <div class="field">
+    <%= f.label :sigmaPhiFirstHalfInterval %><br />
+    <%= f.text_field :sigmaPhiFirstHalfInterval %>
+  </div>
+  <div class="field">
+    <%= f.label :sigmaPhiSecondHalfInterval %><br />
+    <%= f.text_field :sigmaPhiSecondHalfInterval %>
+  </div>
+  <div class="field">
+    <%= f.label :tau0 %><br />
+    <%= f.text_field :tau0 %>
+  </div>
+  <div class="field">
+    <%= f.label :scintillationPowerRatio %><br />
+    <%= f.text_field :scintillationPowerRatio %>
+  </div>
+  <div class="field">
+    <%= f.label :referenceChannelIndicator %><br />
+    <%= f.number_field :referenceChannelIndicator %>
+  </div>
+  <div class="field">
+    <%= f.label :signalTypeID %><br />
+    <%= f.number_field :signalTypeID %>
+  </div>
+  <div class="field">
+    <%= f.label :transmitterID %><br />
+    <%= f.number_field :transmitterID %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

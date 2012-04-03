@@ -1,0 +1,45 @@
+<%= form_for(@transmitter) do |f| %>
+  <% if @transmitter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@transmitter.errors.count, "error") %> prohibited this transmitter from being saved:</h2>
+
+      <ul>
+      <% @transmitter.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :receiverID %><br />
+    <%= f.number_field :receiverID %>
+  </div>
+  <div class="field">
+    <%= f.label :offsetTimeID %><br />
+    <%= f.number_field :offsetTimeID %>
+  </div>
+  <div class="field">
+    <%= f.label :azmiuth %><br />
+    <%= f.text_field :azmiuth %>
+  </div>
+  <div class="field">
+    <%= f.label :elevation %><br />
+    <%= f.text_field :elevation %>
+  </div>
+  <div class="field">
+    <%= f.label :healthStatusID %><br />
+    <%= f.number_field :healthStatusID %>
+  </div>
+  <div class="field">
+    <%= f.label :transmitterSystemID %><br />
+    <%= f.number_field :transmitterSystemID %>
+  </div>
+  <div class="field">
+    <%= f.label :transmitterID %><br />
+    <%= f.number_field :transmitterID %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

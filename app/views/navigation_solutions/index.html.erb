@@ -1,0 +1,41 @@
+<h1>Listing navigation_solutions</h1>
+
+<table>
+  <tr>
+    <th>Receiverid</th>
+    <th>Navigationsolverid</th>
+    <th>Xposition</th>
+    <th>Yposition</th>
+    <th>Zposition</th>
+    <th>Deltareceiverclockerror</th>
+    <th>Xvelocity</th>
+    <th>Yvelocity</th>
+    <th>Zvelocity</th>
+    <th>Deltareceiverclockerrordot</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @navigation_solutions.each do |navigation_solution| %>
+  <tr>
+    <td><%= navigation_solution.receiverID %></td>
+    <td><%= navigation_solution.navigationSolverID %></td>
+    <td><%= navigation_solution.xPosition %></td>
+    <td><%= navigation_solution.yPosition %></td>
+    <td><%= navigation_solution.zPosition %></td>
+    <td><%= navigation_solution.deltaReceiverClockError %></td>
+    <td><%= navigation_solution.xVelocity %></td>
+    <td><%= navigation_solution.yVelocity %></td>
+    <td><%= navigation_solution.zVelocity %></td>
+    <td><%= navigation_solution.deltaReceiverClockErrorDot %></td>
+    <td><%= link_to 'Show', navigation_solution %></td>
+    <td><%= link_to 'Edit', edit_navigation_solution_path(navigation_solution) %></td>
+    <td><%= link_to 'Destroy', navigation_solution, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Navigation solution', new_navigation_solution_path %>

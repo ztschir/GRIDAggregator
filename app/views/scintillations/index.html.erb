@@ -1,0 +1,49 @@
+<h1>Listing scintillations</h1>
+
+<table>
+  <tr>
+    <th>Receiverid</th>
+    <th>Offsettimeid</th>
+    <th>Measurementintervallength</th>
+    <th>S4wholeinterval</th>
+    <th>S4firsthalfinterval</th>
+    <th>S4secondhalfinterval</th>
+    <th>Sigmaphiwholeinterval</th>
+    <th>Sigmaphifirsthalfinterval</th>
+    <th>Sigmaphisecondhalfinterval</th>
+    <th>Tau0</th>
+    <th>Scintillationpowerratio</th>
+    <th>Referencechannelindicator</th>
+    <th>Signaltypeid</th>
+    <th>Transmitterid</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @scintillations.each do |scintillation| %>
+  <tr>
+    <td><%= scintillation.receiverID %></td>
+    <td><%= scintillation.offsetTimeID %></td>
+    <td><%= scintillation.measurementIntervalLength %></td>
+    <td><%= scintillation.s4WholeInterval %></td>
+    <td><%= scintillation.s4FirstHalfInterval %></td>
+    <td><%= scintillation.s4SecondHalfInterval %></td>
+    <td><%= scintillation.sigmaPhiWholeInterval %></td>
+    <td><%= scintillation.sigmaPhiFirstHalfInterval %></td>
+    <td><%= scintillation.sigmaPhiSecondHalfInterval %></td>
+    <td><%= scintillation.tau0 %></td>
+    <td><%= scintillation.scintillationPowerRatio %></td>
+    <td><%= scintillation.referenceChannelIndicator %></td>
+    <td><%= scintillation.signalTypeID %></td>
+    <td><%= scintillation.transmitterID %></td>
+    <td><%= link_to 'Show', scintillation %></td>
+    <td><%= link_to 'Edit', edit_scintillation_path(scintillation) %></td>
+    <td><%= link_to 'Destroy', scintillation, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Scintillation', new_scintillation_path %>

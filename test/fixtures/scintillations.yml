@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  receiverID: 1
+  offsetTimeID: 1
+  measurementIntervalLength: 1.5
+  s4WholeInterval: 1.5
+  s4FirstHalfInterval: 1.5
+  s4SecondHalfInterval: 1.5
+  sigmaPhiWholeInterval: 1.5
+  sigmaPhiFirstHalfInterval: 1.5
+  sigmaPhiSecondHalfInterval: 1.5
+  tau0: 1.5
+  scintillationPowerRatio: 1.5
+  referenceChannelIndicator: 1
+  signalTypeID: 1
+  transmitterID: 1
+
+two:
+  receiverID: 1
+  offsetTimeID: 1
+  measurementIntervalLength: 1.5
+  s4WholeInterval: 1.5
+  s4FirstHalfInterval: 1.5
+  s4SecondHalfInterval: 1.5
+  sigmaPhiWholeInterval: 1.5
+  sigmaPhiFirstHalfInterval: 1.5
+  sigmaPhiSecondHalfInterval: 1.5
+  tau0: 1.5
+  scintillationPowerRatio: 1.5
+  referenceChannelIndicator: 1
+  signalTypeID: 1
+  transmitterID: 1
