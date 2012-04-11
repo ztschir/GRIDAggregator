@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-GRIDClient::Application.load_tasks
+GRIDAggregator::Application.load_tasks

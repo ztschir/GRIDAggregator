@@ -1,4 +1,4 @@
-GRIDClient::Application.routes.draw do
+GRIDAggregator::Application.routes.draw do
 
   get "pages/home"
 
