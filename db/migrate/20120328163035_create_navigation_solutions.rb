@@ -3,6 +3,7 @@ class CreateNavigationSolutions < ActiveRecord::Migration
     create_table :navigation_solutions do |t|
       t.integer :receiverID
       t.integer :navigationSolverID
+      t.integer :offsetTimeID
       t.float :xPosition
       t.float :yPosition
       t.float :zPosition
@@ -14,5 +15,7 @@ class CreateNavigationSolutions < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :navigation_solutions, [:receiverID, :offsetTimeID], :name => 'navigation_solution_unique_values', :unique => true
+    
   end
 end

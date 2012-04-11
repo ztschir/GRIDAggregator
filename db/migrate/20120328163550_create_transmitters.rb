@@ -11,5 +11,6 @@ class CreateTransmitters < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :transmitters, [:receiverID, :offsetTimeID, :transmitterSystemID, :transmitterID], :name => 'transmitter_unique_values', :unique => true
   end
 end

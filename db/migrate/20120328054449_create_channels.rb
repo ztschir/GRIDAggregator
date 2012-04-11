@@ -7,7 +7,7 @@ class CreateChannels < ActiveRecord::Migration
       t.integer :channelStatusID
       t.integer :signalTypeID
       t.integer :transmitterID
-      t.float :apperentDoppler
+      t.float :apparentDoppler
       t.float :beatCarrierPhase
       t.float :pseudorange
       t.float :carrierToNoiseRatio
@@ -16,5 +16,6 @@ class CreateChannels < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :channels, [:receiverID, :offsetTimeID, :signalTypeID, :transmitterID], :name => 'channels_unique_values', :unique => true
   end
 end

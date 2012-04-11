@@ -6,5 +6,6 @@ class CreateReceiverTimes < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :receiver_times, [:receiverWeekNumber, :receiverSecondsOfWeek], :name => 'receiver_time_unique_values', :unique => true
   end
 end

@@ -18,5 +18,7 @@ class CreateScintillations < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :scintillations, [:receiverID, :offsetTimeID, :signalTypeID, :transmitterID], :name => 'scintillations_unique_values', :unique => true
+    
   end
 end
