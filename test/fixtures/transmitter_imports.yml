@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  receiverID: 1
+  offsetWeekNumber: 1
+  offsetWholeSecondsOfWeek: 1.5
+  offsetFractionalSecon: 1.5
+  azmiuth: 1.5
+  elevation: 1.5
+  healthStatus: 1
+  transmitterSystemID: 1
+  transmitterID: 1
+
+two:
+  receiverID: 1
+  offsetWeekNumber: 1
+  offsetWholeSecondsOfWeek: 1.5
+  offsetFractionalSecon: 1.5
+  azmiuth: 1.5
+  elevation: 1.5
+  healthStatus: 1
+  transmitterSystemID: 1
+  transmitterID: 1

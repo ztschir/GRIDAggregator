@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  receiverID: 1
+  offsetWeekNumber: 1
+  offsetWholeSecondsOfWeek: 1.5
+  offsetFractionalSecond: 1.5
+  pseudorangeDerivedSTEC: 1.5
+  pseudorangeDerivedSTECDot: 1.5
+  transmitterID: 1
+
+two:
+  receiverID: 1
+  offsetWeekNumber: 1
+  offsetWholeSecondsOfWeek: 1.5
+  offsetFractionalSecond: 1.5
+  pseudorangeDerivedSTEC: 1.5
+  pseudorangeDerivedSTECDot: 1.5
+  transmitterID: 1
