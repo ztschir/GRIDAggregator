@@ -1,5 +1,6 @@
 class Channel < ActiveRecord::Base
   
-  has_one :channel_status
-  has_one :signal_type
+  belongs_to :offset_time
+  belongs_to :channel_status
+  belongs_to :signal_type
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120407194558) do
+ActiveRecord::Schema.define(:version => 20120412220020) do
 
   create_table "channel_imports", :force => true do |t|
     t.integer  "receiverID"
@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(:version => 20120407194558) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "channel_statuses", ["name"], :name => "channel_status_unique_values", :unique => true
 
   create_table "channels", :force => true do |t|
     t.integer  "receiverID"
@@ -82,6 +84,12 @@ ActiveRecord::Schema.define(:version => 20120407194558) do
 
   add_index "ionospheres", ["receiverID", "offsetTimeID", "transmitterID"], :name => "ionospheres_unique_values", :unique => true
 
+  create_table "leap_seconds", :force => true do |t|
+    t.datetime "date"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "navigation_imports", :force => true do |t|
     t.integer  "receiverID"
     t.integer  "offsetWeekNumber"
@@ -124,10 +132,13 @@ ActiveRecord::Schema.define(:version => 20120407194558) do
     t.datetime "updated_at", :null => false
   end
 
+  add_index "navigation_solvers", ["name"], :name => "navigation_solvers_unique_values", :unique => true
+
   create_table "offset_times", :force => true do |t|
     t.integer  "offsetWeekNumber"
     t.integer  "offsetWholeSecondsOfWeek"
     t.float    "offsetFractionalSecond"
+    t.datetime "utcTime"
     t.datetime "created_at",               :null => false
     t.datetime "updated_at",               :null => false
   end
@@ -144,10 +155,12 @@ ActiveRecord::Schema.define(:version => 20120407194558) do
   add_index "receiver_times", ["receiverWeekNumber", "receiverSecondsOfWeek"], :name => "receiver_time_unique_values", :unique => true
 
   create_table "receivers", :force => true do |t|
-    t.string   "Name"
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "receivers", ["name"], :name => "receivers_unique_values", :unique => true
 
   create_table "scintillation_imports", :force => true do |t|
     t.integer  "receiverID"
@@ -197,11 +210,15 @@ ActiveRecord::Schema.define(:version => 20120407194558) do
     t.datetime "updated_at", :null => false
   end
 
+  add_index "signal_types", ["name"], :name => "signal_type_unique_values", :unique => true
+
   create_table "system_types", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "system_types", ["name"], :name => "system_type_unique_values", :unique => true
 
   create_table "transmitter_imports", :force => true do |t|
     t.integer  "receiverID"
