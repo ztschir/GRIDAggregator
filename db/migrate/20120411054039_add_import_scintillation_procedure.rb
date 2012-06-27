@@ -31,7 +31,7 @@ class AddImportScintillationProcedure < ActiveRecord::Migration
               						scintillation_imports.sigma_phi_first_half_interval, scintillation_imports.sigma_phi_second_half_interval, 
               						scintillation_imports.tau0, scintillation_imports.scintillation_power_ratio, 
               						scintillation_imports.reference_channel_indicator,
-        								scintillation_imports.signal_type_id, scintillation_imports.transmitter_id,
+        								scintillation_imports.signal_type_id + 1 as signal_type_id, scintillation_imports.transmitter_id,
         								CURRENT_TIMESTAMP() as created_at, CURRENT_TIMESTAMP() as updated_at
               FROM scintillation_imports
               JOIN offset_times on offset_times.offset_week_number = scintillation_imports.offset_week_number 

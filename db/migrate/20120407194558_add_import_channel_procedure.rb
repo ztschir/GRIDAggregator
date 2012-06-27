@@ -30,7 +30,7 @@ class AddImportChannelProcedure < ActiveRecord::Migration
             						beat_carrier_phase, pseudorange, carrier_to_noise_ratio, is_valid_pseudorange_and_phase, 
             						is_anomaly_detected, created_at, updated_at)
             SELECT channel_imports.receiver_id, receiver_times.id as receiver_time_id, offset_times.id as offset_time_id, 
-            						channel_imports.channel_status_id, channel_imports.signal_type_id, channel_imports.transmitter_id,
+            						channel_imports.channel_status_id + 1 as channel_status_id, channel_imports.signal_type_id + 1 as signal_type_id, channel_imports.transmitter_id,
             						channel_imports.apparent_doppler, channel_imports.beat_carrier_phase, channel_imports.pseudorange, 
             						channel_imports.carrier_to_noise_ratio, channel_imports.is_valid_pseudorange_and_phase, 
             						channel_imports.is_anomaly_detected, CURRENT_TIMESTAMP() as created_at, CURRENT_TIMESTAMP() as updated_at

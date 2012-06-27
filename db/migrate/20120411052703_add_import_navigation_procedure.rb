@@ -28,7 +28,7 @@ class AddImportNavigationProcedure < ActiveRecord::Migration
               						navigation_imports.delta_receiver_clock_error, navigation_imports.x_velocity, 
               						navigation_imports.y_velocity, navigation_imports.z_velocity, 
               						navigation_imports.delta_receiver_clock_error_dot, 
-              						navigation_imports.navigation_solver_id, CURRENT_TIMESTAMP() as created_at, 
+              						navigation_imports.navigation_solver_id + 1 as navigation_solver_id, CURRENT_TIMESTAMP() as created_at, 
               						CURRENT_TIMESTAMP() as updated_at
               FROM navigation_imports
               JOIN offset_times on offset_times.offset_week_number = navigation_imports.offset_week_number 
