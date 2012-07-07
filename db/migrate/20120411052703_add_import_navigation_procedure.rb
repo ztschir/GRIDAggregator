@@ -15,7 +15,7 @@ class AddImportNavigationProcedure < ActiveRecord::Migration
 
               INSERT INTO offset_times (offset_week_number, offset_whole_seconds_of_week, offset_fractional_second)
               SELECT navigation_imports.offset_week_number, 
-              	navigation_imports.offset_wholeseconds_of_week, navigation_imports.offset_fractional_second
+              	navigation_imports.offset_whole_seconds_of_week, navigation_imports.offset_fractional_second
               FROM navigation_imports
               ON DUPLICATE KEY UPDATE offset_times.id = offset_times.id;     
 
