@@ -3,3 +3,6 @@
 
 <%= high_stock("pseudorange", @h) %>
 
+<%= select_tag "Receiver ID", options_from_collection_for_select(@receiverIDs, :id, :id)%>
+
+
