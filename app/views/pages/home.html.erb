@@ -5,4 +5,6 @@
 
 <%= select_tag "Receiver ID", options_from_collection_for_select(@receiverIDs, :id, :id)%>
 
+<%= select_tag "Transmitter ID", options_from_collection_for_select(@transmitterIDs, :transmitter_id, :transmitter_id)%>
 
+<%= select_tag "Signal Type", options_from_collection_for_select(@signalTypes, :name, :name)%>
